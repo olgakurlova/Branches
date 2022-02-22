@@ -1,0 +1,14 @@
+Structure of bug report
+1) ID number
+2) Project Name 
+3) Defect Reported Date 
+4)Summary / Title/
+5) Steps to reproduce
+6) Expected result
+7) Actual result
+8) Priority
+9) Severity
+10) Status
+11) Skreenshot/video
+12) Environment
+13) additional info
