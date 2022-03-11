@@ -1,0 +1,46 @@
+1. На локальном репозитории сделать ветки для:
+- Postman
+- Jmeter
+- CheckLists
+- Bag Reports
+- SQL
+- Charles
+- Mobile testing
+ ===создаем на веб новый репозиторий ===create repository===
+ ===скопировать ссылку https===
+ === открыть GitBash в папке где будет находится репозиторий===
+ ===git clone https://github.com/olgakurlova/Branches.git===//ввести в терминале команду//
+ ===cd Branches===//перейти в папку с новым репозиторием//
+ ===git branch Postman && git branch Jmeter && git branch CheckLists && git branch Bug_reports && git branch SQL && git branch Charles && git branch Mobile_testing===//создаем сразу несколько веток//
+
+2. Запушить все ветки на внешний репозиторий ===git push --all===
+3. В ветке Bag Reports сделать текстовый документ со структурой баг репорта
+=== git checkout Bug_reports===//переходим на ветку Bug_reports//
+===cat > Structure.txt===// создаем файл и заполняем информацию//
+4. Запушить структуру багрепорта на внешний репозиторий
+===git add Structure.txt && git commit -m "add strture.txt"===//добавляем файл под Git и делаем коммит//
+===git push --set-upstream origin Bug_reports===//переносим изменения на внешний реозиторий//
+
+5. Вмержить ветку Bag Reports в Main
+===git checkout main===
+===git merge Bug_reports===
+6. Запушить main на внешний репозиторий.===git push===
+7. В ветке CheckLists набросать структуру чек листа.
+=== git checkout CheckLists===// перейдем на ветку CheckLists//
+===touch StrCheklist.txt===// создадим файл StrCheklist.txt//
+===vim StrCheklist.txt===// внесем структуру чек листа//
+8. Запушить структуру на внешний репозиторий
+===git add StrCheklist.txt && git commit -m "add StrCheklist.txt"===//добавляем файл под Git и делаем коммит//
+===git push --set-upstream origin CheckLists===//переносим изменеия на внешний репозиторий в ветку CheckLists//
+9. На внешнем репозитории сделать Pull Request ветки CheckLists в main
+=== на GitHub заходим во вкладку Pull requests===
+=== нажимаем зеленую кнопку New Pull requests===
+=== проставляем в поле compare -CheckLists===
+===  нажимаем зеленую кнопку Create pull request ===
+=== получаем собщение This branch has no conflicts with the base branch ===
+=== нажимаем кнопку Merge pull requests===
+=== нажимаем кнопку Confirm merge===
+=== получаем сообщение Pull request successfully merged and closed===//добавили изменения с ветки  CheckLists в Main//
+10. Синхронизировать Внешнюю и Локальную ветки Main
+=== git checkout main===//в GitBash переходим в ветку Main//
+=== git pull===//переносим изменения с внешнего репозитория на внутренний//
